@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1fM-H9-mxF">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home TableVC-->
+        <scene sceneID="kqI-Pf-goH">
+            <objects>
+                <tableViewController id="4lq-0f-lYe" customClass="HomeTableVC" customModule="HowIsWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="HUC-dg-vdB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="4lq-0f-lYe" id="odW-3Q-7fN"/>
+                            <outlet property="delegate" destination="4lq-0f-lYe" id="vXL-Q1-uhP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="5OO-rb-WrU">
+                        <barButtonItem key="rightBarButtonItem" image="location.magnifyingglass" catalog="system" id="gsw-6f-pDu">
+                            <imageReference key="landscapeImage" image="location.magnifyingglass" catalog="system" symbolScale="large"/>
+                            <imageReference key="largeContentSizeImage" image="location.magnifyingglass" catalog="system" symbolScale="large"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="BZO-Dc-LO9" kind="show" id="yNK-DG-D6Y"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0br-ro-zky" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1666.4122137404579" y="-388.02816901408454"/>
+        </scene>
+        <!--Cities Table View Controller-->
+        <scene sceneID="jc3-fF-J8N">
+            <objects>
+                <tableViewController id="BZO-Dc-LO9" customClass="CitiesTableViewController" customModule="HowIsWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Jao-kO-3QZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="BZO-Dc-LO9" id="Xak-SX-LWD"/>
+                            <outlet property="delegate" destination="BZO-Dc-LO9" id="T6d-wH-bv2"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="tio-gN-3Iv"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mu6-6L-9IG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2621" y="-394"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VMf-T7-YQ9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1fM-H9-mxF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="q5S-Lm-sMH">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4lq-0f-lYe" kind="relationship" relationship="rootViewController" id="Xae-so-eUH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UcA-MM-dir" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="739.69465648854964" y="-388.02816901408454"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="location.magnifyingglass" catalog="system" width="128" height="117"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="HeaderTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderTableViewCell" rowHeight="422" id="KGk-i7-Jjw" customClass="HeaderTableViewCell" customModule="HowIsWeather" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="481" height="420"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="481" height="420"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32°C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQb-Ls-Fq7">
+                        <rect key="frame" x="0.0" y="167.66666666666666" width="481" height="104.99999999999997"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="90"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ankara, TÜRKİYE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAd-6a-0sk">
+                        <rect key="frame" x="0.0" y="48" width="481" height="45.333333333333343"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="38"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19/34°C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4h7-81-ueR">
+                        <rect key="frame" x="0.0" y="320.66666666666669" width="481" height="39.666666666666686"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="34"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friday, March 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCt-SQ-EpS">
+                        <rect key="frame" x="0.0" y="93.333333333333329" width="481" height="26.333333333333329"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="4h7-81-ueR" firstAttribute="trailing" secondItem="aQb-Ls-Fq7" secondAttribute="trailing" id="4bq-jP-1sm"/>
+                    <constraint firstItem="zCt-SQ-EpS" firstAttribute="trailing" secondItem="MAd-6a-0sk" secondAttribute="trailing" id="5wj-Nm-rr4"/>
+                    <constraint firstItem="4h7-81-ueR" firstAttribute="leading" secondItem="aQb-Ls-Fq7" secondAttribute="leading" id="IXL-mf-eRr"/>
+                    <constraint firstItem="MAd-6a-0sk" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="L3h-vM-7JD"/>
+                    <constraint firstItem="MAd-6a-0sk" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="Lcs-NK-Wez"/>
+                    <constraint firstItem="zCt-SQ-EpS" firstAttribute="leading" secondItem="MAd-6a-0sk" secondAttribute="leading" id="Llf-th-XV2"/>
+                    <constraint firstItem="aQb-Ls-Fq7" firstAttribute="top" secondItem="zCt-SQ-EpS" secondAttribute="bottom" constant="48" id="MWX-If-a9e"/>
+                    <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="4h7-81-ueR" secondAttribute="bottom" constant="62.666666666666686" id="RsD-Xo-Eez"/>
+                    <constraint firstItem="aQb-Ls-Fq7" firstAttribute="leading" secondItem="MAd-6a-0sk" secondAttribute="leading" id="dog-Ju-u1W"/>
+                    <constraint firstItem="4h7-81-ueR" firstAttribute="top" secondItem="aQb-Ls-Fq7" secondAttribute="bottom" constant="48" id="fFj-LN-jUm"/>
+                    <constraint firstItem="MAd-6a-0sk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="48" id="h91-mo-C6k"/>
+                    <constraint firstItem="aQb-Ls-Fq7" firstAttribute="trailing" secondItem="MAd-6a-0sk" secondAttribute="trailing" id="ixi-Pg-Bch"/>
+                    <constraint firstItem="zCt-SQ-EpS" firstAttribute="top" secondItem="MAd-6a-0sk" secondAttribute="bottom" id="pPg-Nx-UlW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cityLabel" destination="MAd-6a-0sk" id="RqZ-9m-avM"/>
+                <outlet property="mainWeatherDegree" destination="aQb-Ls-Fq7" id="jdt-6r-3hv"/>
+                <outlet property="todaysDateLabel" destination="zCt-SQ-EpS" id="XsD-FC-KwN"/>
+                <outlet property="todaysMinMaxDegree" destination="4h7-81-ueR" id="c5A-Qf-Pny"/>
+            </connections>
+            <point key="canvasLocation" x="72.51908396946564" y="23.943661971830988"/>
+        </tableViewCell>
+    </objects>
+</document>

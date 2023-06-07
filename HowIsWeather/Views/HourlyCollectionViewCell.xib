@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="HourlyCollectionViewCell" reuseIdentifier="HourlyCollectionViewCell" id="gTV-IL-0wX" customClass="HourlyCollectionViewCell" customModule="HowIsWeather" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="123" height="208"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="123" height="208"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="00:30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDY-BI-wpo">
+                        <rect key="frame" x="8" y="59" width="107" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="tta-gY-rR5"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30°C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQB-Wt-rZ3">
+                        <rect key="frame" x="8" y="173" width="107" height="35"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v9r-MI-gWi">
+                        <rect key="frame" x="8" y="91.000000000000014" width="108" height="84.333333333333329"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <imageReference key="image" image="cloud.sun.fill" catalog="system" symbolScale="large"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="kQB-Wt-rZ3" firstAttribute="trailing" secondItem="v9r-MI-gWi" secondAttribute="trailing" id="59q-cn-xx0"/>
+                <constraint firstItem="v9r-MI-gWi" firstAttribute="top" secondItem="yDY-BI-wpo" secondAttribute="bottom" id="5Nq-5K-Xta"/>
+                <constraint firstItem="kQB-Wt-rZ3" firstAttribute="top" secondItem="v9r-MI-gWi" secondAttribute="bottom" id="8px-g9-aIH"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="kQB-Wt-rZ3" secondAttribute="bottom" id="8xG-ya-xoZ"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="yDY-BI-wpo" secondAttribute="top" id="9zy-ab-BO8"/>
+                <constraint firstItem="kQB-Wt-rZ3" firstAttribute="height" secondItem="yDY-BI-wpo" secondAttribute="height" id="F2k-xC-dHW"/>
+                <constraint firstItem="v9r-MI-gWi" firstAttribute="trailing" secondItem="yDY-BI-wpo" secondAttribute="trailing" id="Tdo-pn-qlJ"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="yDY-BI-wpo" secondAttribute="trailing" constant="8" id="fPN-pX-WFy"/>
+                <constraint firstItem="kQB-Wt-rZ3" firstAttribute="leading" secondItem="v9r-MI-gWi" secondAttribute="leading" id="iv8-cb-F77"/>
+                <constraint firstItem="yDY-BI-wpo" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="kOO-mH-Xq8"/>
+                <constraint firstItem="yDY-BI-wpo" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="8" id="mj0-ve-lOb"/>
+                <constraint firstItem="v9r-MI-gWi" firstAttribute="leading" secondItem="yDY-BI-wpo" secondAttribute="leading" id="nbY-0y-toU"/>
+            </constraints>
+            <size key="customSize" width="223" height="236"/>
+            <connections>
+                <outlet property="degreeLabel" destination="kQB-Wt-rZ3" id="eh1-c6-8Bt"/>
+                <outlet property="hourLabel" destination="yDY-BI-wpo" id="YIK-5H-FPZ"/>
+                <outlet property="weatherImageView" destination="v9r-MI-gWi" id="KhH-U7-LUK"/>
+            </connections>
+            <point key="canvasLocation" x="258.77862595419845" y="45.774647887323944"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="cloud.sun.fill" catalog="system" width="128" height="96"/>
+    </resources>
+</document>
